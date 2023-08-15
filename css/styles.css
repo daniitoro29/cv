@@ -1,121 +1,235 @@
-/* Estilos generales */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,300;0,400;1,200;1,300;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;1,200;1,300&display=swap');
+
+:root {
+    --primary-color: #ffffff;
+    --title-family: 'Montserrat', sans-serif;
+    --p-family: 'Poppins', sans-serif;
+    --grey-light: #51585f;
+    --grey-medium: #3c434a;
+    --grey-dark: #293036;
+    --orange-light: #f3bf9c;
+    --orange-dark: #ffb888;
+}
+
 body {
-    font-family: 'Poppins', sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f7f7f7;
+    background: var(--grey-dark) !important;
+    color: var(--primary-color) !important;
+}
+
+.navbar ul {
+    column-gap: 20px;
+}
+
+body h1 {
+    font-family: var(--title-family) !important;
+    font-weight: 900;
+}
+
+body h2 {
+    font-family: var(--p-family);
+}
+
+body h3 {
+    font-family: var(--p-family);
+}
+
+.line-1 {
+    white-space: nowrap;
+    overflow: hidden;
+    transform: translateY(-50%);
+    width: 100%;
+    margin-top: revert;
+}
+
+/* Animation */
+.anim-typewriter {
+    animation: typewriter 4s steps(44) 1s 1 normal both,
+        blinkTextCursor 500ms steps(44) infinite normal;
+}
+
+@keyframes typewriter {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 24em;
+    }
+}
+
+@keyframes blinkTextCursor {
+    from {
+        border-right-color: rgba(255, 255, 255, .75);
+    }
+
+    to {
+        border-right-color: transparent;
+    }
+}
+
+
+header nav ul li a {
+    color: var(--primary-color) !important;
+}
+
+#principal {
+    padding: 50px 30px;
+    background: var(--grey-medium);
+}
+
+#principal img {
+    max-width: 70%;
+    max-height: 70%;
+}
+
+#principal button {
+    border-radius: 20px;
+    border: 2px solid var(--orange-dark);
+    width: 200px;
+    padding: 5px;
+    color: var(--orange-dark);
+    background: var(--grey-dark);
+    margin: 20px 10px;
+}
+
+#principal button:hover {
+    background: var(--orange-dark);
+    color: var(--grey-dark);
+}
+
+.img-programmer {
+    display: flex;
+    justify-content: center;
+}
+
+#aboutMe {
+    width: 100%;
+    position: relative;
+    padding: 50px 30px;
+}
+
+.title {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+#aboutMe .developer {
+    display: flex;
+    align-items: center;
+}
+
+#aboutMe .developer img {
+    max-width: 100%;
+}
+
+#skills {
+    background: var(--grey-medium);
+    padding: 50px 30px;
+}
+
+#skills .skills-img {
+    max-width: 120px;
+    padding: 20px;
+    border: 2px solid var(--grey-dark);
+    border-radius: 15px;
+    background: var(--grey-dark);
+}
+
+#skills .skills-img img {
+    width: 100%;
+}
+
+#skills .row {
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 50px ;
+}
+
+#education {
+    padding: 50px 30px;
+}
+
+#education .row {
+    justify-content: space-evenly;
+}
+
+#education .study {
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
-    align-items: center;
-    justify-content: space-between;
-  }
-  
-  /* Estilos para el menú */
-  nav {
-    background-color: #292b2c;
-    color: white;
-    text-align: center;
-    padding: 10px 0;
-    width: 100%;
-  }
-  
-  .lista {
-    list-style: none;
-    padding: 0;
-    display: flex;
     justify-content: center;
     align-items: center;
-  }
-  
-  .lista li {
-    margin: 0 15px;
-  }
-  
-  .aboutMe {
-    text-decoration: none;
-    color: white;
-    font-weight: bold;
-    padding: 10px;
-    transition: background-color 0.3s ease-in-out;
-  }
-  
-  .aboutMe:hover {
-    background-color: #212529;
-  }
-  
-  /* Estilos para las secciones */
-  section {
-    margin: 20px;
-    padding: 20px;
-    background-color: white;
-    border: 1px solid #ddd;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    text-align: left;
-    width: 90%;
-  }
-  
-  h1, h2, h3 {
-    color: #292b2c;
-    margin-bottom: 10px;
-  }
+}
 
-  h1 {
-    display: flex;
+#education .study img {
+    max-width: 200px;
+    /* max-height: 200px; */
+    border-radius: 20px;
+}
+
+#education .study h3 {  
+    padding: 25px 0 10px;
+    font-size: 18px;
+}
+
+#education .study h4 {  
+    font-size: 15px;
+}
+
+#proyects {
+    padding: 50px 30px;
+    background: var(--grey-medium);
+}
+
+.carousel-item.active {
+    display: flex !important;
     justify-content: center;
-  }
-  
-  /* Estilos para los párrafos */
-  p {
-    margin-bottom: 15px;
-    line-height: 1.6;
-    color: #555;
-  }
-  
-  /* Estilos para la foto personal en un círculo */
-  .me-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    background-color: #292b2c;
-    margin-bottom: 20px;
-  }
-  
-  .me {
-    border-radius: 50%;
-    width: 130px;
-    height: 130px;
-    object-fit: cover;
-    object-position: center;
-  }
-  
-  /* Estilos para las listas */
-  ul, li {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-  }
-  
-  /* Estilos para las habilidades aprendidas */
-  li ul {
-    margin-left: 20px;
-    padding-left: 10px;
-  }
-  
-  /* Estilos para el footer en la parte inferior */
-  footer {
-    background-color: #292b2c;
-    color: white;
+    flex-direction: column;
     text-align: center;
-    padding: 20px 0;
-    width: 100%;
-  }
-  
-  .img-footer {
-    width: 20px;
-    margin: 0 5px;
-  }
-  
+    align-items: center;
+}
+
+.carousel-caption {
+    padding-bottom: -20px !important;
+}
+
+.carousel-item h5 {
+    padding: 10px;
+    font-style: italic;
+}
+
+footer {
+    padding: 20px 30px;
+    height: 50px;
+}
+
+#footer {
+    background: var(--grey-dark);
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+}
+
+#footer .redes {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#footer .redes img {
+    max-width: 30px;
+    margin: 10px;
+}
+
+#footer h5 {
+    font-size: 12px;
+    display: flex;
+    justify-content: center;
+    padding-top: 10px;
+}
+
+#footer h2 {
+    color: var(--orange-dark);
+    font-style: italic;
+}
