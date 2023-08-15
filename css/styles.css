@@ -1,0 +1,121 @@
+/* Estilos generales */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f7f7f7;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  /* Estilos para el menú */
+  nav {
+    background-color: #292b2c;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    width: 100%;
+  }
+  
+  .lista {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .lista li {
+    margin: 0 15px;
+  }
+  
+  .aboutMe {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    padding: 10px;
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  .aboutMe:hover {
+    background-color: #212529;
+  }
+  
+  /* Estilos para las secciones */
+  section {
+    margin: 20px;
+    padding: 20px;
+    background-color: white;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    width: 90%;
+  }
+  
+  h1, h2, h3 {
+    color: #292b2c;
+    margin-bottom: 10px;
+  }
+
+  h1 {
+    display: flex;
+    justify-content: center;
+  }
+  
+  /* Estilos para los párrafos */
+  p {
+    margin-bottom: 15px;
+    line-height: 1.6;
+    color: #555;
+  }
+  
+  /* Estilos para la foto personal en un círculo */
+  .me-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background-color: #292b2c;
+    margin-bottom: 20px;
+  }
+  
+  .me {
+    border-radius: 50%;
+    width: 130px;
+    height: 130px;
+    object-fit: cover;
+    object-position: center;
+  }
+  
+  /* Estilos para las listas */
+  ul, li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  
+  /* Estilos para las habilidades aprendidas */
+  li ul {
+    margin-left: 20px;
+    padding-left: 10px;
+  }
+  
+  /* Estilos para el footer en la parte inferior */
+  footer {
+    background-color: #292b2c;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    width: 100%;
+  }
+  
+  .img-footer {
+    width: 20px;
+    margin: 0 5px;
+  }
+  
